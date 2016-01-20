@@ -1,0 +1,51 @@
+//
+//  UncleCharPrefixHeader.pch
+//  UncleCharDemos
+//
+//  Created by LingLi on 16/1/8.
+//  Copyright © 2016年 hailong.xie. All rights reserved.
+//
+
+#ifndef UncleCharPrefixHeader_pch
+#define UncleCharPrefixHeader_pch
+
+/**
+ *  这个类是配置ui的工具类
+ */
+#import "ConfigUITools.h"
+
+/**
+ *  这个类是app的发动机类,负责处理一些初始化必须的类和属性
+ */
+#import "AppEngineManager.h"
+
+
+/**
+ *  这个跟控制器是跟控制器，包含有 LeftViewController 和 MainTabbarController
+ */
+#import "AppBaseViewController.h"
+
+/**
+ *  以下几个是走遍四海而皆知的东西，不必多说
+ */
+#import "Masonry.h"
+#import "SVProgressHUD.h"
+#import "DBManager.h"
+
+
+#define kDriftXOfBaseView  [UIScreen mainScreen].bounds.size.width * 3 / 4
+#define kDriftXOfLeftView  [UIScreen mainScreen].bounds.size.width * 3 / 4
+#define kDriftYOfLeftView  [UIScreen mainScreen].bounds.size.width / 4
+#define kDriftDuration     0.40
+
+#define kAvatarImgFloderName   @"LeftElementsFile"
+#define kPersonalizedSignature @"userSign"
+#define kUserLoginStatus       @"isLoginSuccess"
+#define kNetworkStatus         @"isNetworkWorking"
+
+#define kScreenHeight  [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define kBtnColor [UIColor colorWithRed:103.0/255.0 green:203.0/255.0 blue:249.0/255.0 alpha:0.75]
+
+
+#endif
