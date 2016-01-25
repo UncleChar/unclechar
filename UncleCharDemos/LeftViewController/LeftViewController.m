@@ -16,6 +16,7 @@
 #import "VoiceRecognitionViewController.h"
 #import "EaseMobViewController.h"
 #import "JChatViewController.h"
+#import "DeviceUUIDViewController.h"
 #define kAvatarImgWidth    kDriftXOfLeftView / 4
 #define kAvatarImgHeight   kDriftXOfLeftView / 4
 
@@ -83,7 +84,7 @@
     [_headView addSubview:_signNameLabel];
 
     
-    _titleListArray = @[@"数据库测试-[FMDB]", @"MyLocation", @"UserAccount", @"GifPlayer", @"IflyMSC", @"EaseMob", @"JPushChat"];
+    _titleListArray = @[@"数据库测试-[FMDB]", @"MyLocation", @"UserAccount", @"GifPlayer", @"IflyMSC", @"EaseMob", @"JPushChat",@"DeviceUUID"];
     _listTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_topBackgrooundImg.frame),self.view.frame.size.width, self.view.frame.size.height-_headView.frame.size.height - self.view.frame.size.height / 8) style:UITableViewStylePlain];
     _listTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _listTableView.dataSource = self;
@@ -211,6 +212,14 @@
             
         }
             break;
+        case 7:
+            
+        {
+            
+            DeviceUUIDViewController *voiceVC = [[DeviceUUIDViewController alloc]init];
+            [baseVC.navigationController pushViewController:voiceVC animated:YES];
+            
+        }
             
         default:
             break;

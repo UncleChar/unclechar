@@ -207,7 +207,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     
-    NSLog(@"gegin");
+//    NSLog(@"gegin");
     [self configTV];
     
 }
@@ -224,8 +224,8 @@
     }else {
     
     
-        NSLog(@"#%@  88  %@",string,textField.text);
-        NSLog(@"%@",NSStringFromRange(range));
+//        NSLog(@"#%@  88  %@",string,textField.text);
+//        NSLog(@"%@",NSStringFromRange(range));
         [_transferArray removeAllObjects];
         
         
@@ -237,7 +237,7 @@
             
             _userInputAccount = [_userInputAccount substringToIndex:rangeStr.location];
             
-            NSLog(@"#inputdeleted# %@",_userInputAccount);
+//            NSLog(@"#inputdeleted# %@",_userInputAccount);
             
         }else { //此时是追加字符的
             
@@ -250,7 +250,7 @@
                 _userInputAccount = [_userInputAccount stringByAppendingString:string];
                 
             }
-            NSLog(@"#inputChates# %@",_userInputAccount);
+//            NSLog(@"#inputChates# %@",_userInputAccount);
         }
         
         

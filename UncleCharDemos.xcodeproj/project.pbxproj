@@ -41,6 +41,9 @@
 		9D81F5EF1C325ADB00EA6CB4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D81F5E11C325ADB00EA6CB4 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		9D81F5F01C325ADB00EA6CB4 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D81F5E31C325ADB00EA6CB4 /* View+MASAdditions.m */; };
 		9D81F5F11C325ADB00EA6CB4 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D81F5E61C325ADB00EA6CB4 /* ViewController+MASAdditions.m */; };
+		9D911C2B1C55CFD40087C4A5 /* DeviceUUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D911C2A1C55CFD40087C4A5 /* DeviceUUIDViewController.m */; };
+		9D911C2F1C55D0520087C4A5 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D911C2E1C55D0520087C4A5 /* SSKeychain.m */; };
+		9D911C321C55EFBB0087C4A5 /* ConfigParameterTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D911C311C55EFBB0087C4A5 /* ConfigParameterTools.m */; };
 		9DA098251C45F98500289843 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA098241C45F98500289843 /* libiconv.tbd */; };
 		9DA098271C45F99B00289843 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA098261C45F99B00289843 /* libresolv.tbd */; };
 		9DA098291C45F9A700289843 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA098281C45F9A700289843 /* libxml2.tbd */; };
@@ -446,6 +449,12 @@
 		9D81F5E41C325ADB00EA6CB4 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		9D81F5E51C325ADB00EA6CB4 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		9D81F5E61C325ADB00EA6CB4 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		9D911C291C55CFD40087C4A5 /* DeviceUUIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUUIDViewController.h; sourceTree = "<group>"; };
+		9D911C2A1C55CFD40087C4A5 /* DeviceUUIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUUIDViewController.m; sourceTree = "<group>"; };
+		9D911C2D1C55D0520087C4A5 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		9D911C2E1C55D0520087C4A5 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		9D911C301C55EFBB0087C4A5 /* ConfigParameterTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigParameterTools.h; sourceTree = "<group>"; };
+		9D911C311C55EFBB0087C4A5 /* ConfigParameterTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigParameterTools.m; sourceTree = "<group>"; };
 		9DA098241C45F98500289843 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		9DA098261C45F99B00289843 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		9DA098281C45F9A700289843 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
@@ -1053,6 +1062,15 @@
 			path = ASIHttpRequest/Masonry;
 			sourceTree = "<group>";
 		};
+		9D911C2C1C55D0490087C4A5 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				9D911C2D1C55D0520087C4A5 /* SSKeychain.h */,
+				9D911C2E1C55D0520087C4A5 /* SSKeychain.m */,
+			);
+			path = SSKeychain;
+			sourceTree = "<group>";
+		};
 		9DA0983B1C461E7600289843 /* SoundManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1128,6 +1146,8 @@
 				9D42DF111C4F3C8100CA7D47 /* JChatViewController.m */,
 				9D42DF131C4F4B4000CA7D47 /* StartChatViewController.h */,
 				9D42DF141C4F4B4000CA7D47 /* StartChatViewController.m */,
+				9D911C291C55CFD40087C4A5 /* DeviceUUIDViewController.h */,
+				9D911C2A1C55CFD40087C4A5 /* DeviceUUIDViewController.m */,
 			);
 			name = Controllers;
 			path = ../Controllers;
@@ -1736,10 +1756,13 @@
 		DBDE27D61C2FBB9300D10851 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				9D911C2C1C55D0490087C4A5 /* SSKeychain */,
 				9DC22C1B1C311A87007DB2A5 /* ConfigUITools.h */,
 				9DC22C1C1C311A87007DB2A5 /* ConfigUITools.m */,
 				DBDE27FB1C2FD0DB00D10851 /* PracticalToolsClass.h */,
 				DBDE27FC1C2FD0DB00D10851 /* PracticalToolsClass.m */,
+				9D911C301C55EFBB0087C4A5 /* ConfigParameterTools.h */,
+				9D911C311C55EFBB0087C4A5 /* ConfigParameterTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2181,6 +2204,7 @@
 				9D81F5EA1C325ADB00EA6CB4 /* MASConstraintMaker.m in Sources */,
 				9DC22C0A1C30FFF8007DB2A5 /* FMDatabaseQueue.m in Sources */,
 				9D81F5EF1C325ADB00EA6CB4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				9D911C2B1C55CFD40087C4A5 /* DeviceUUIDViewController.m in Sources */,
 				DBA885961C40B29B002CA21E /* MJRefreshBackNormalFooter.m in Sources */,
 				DB167ADD1C2D767600AE61DB /* ContactsViewController.m in Sources */,
 				9DC22C111C3102A8007DB2A5 /* DBManager.m in Sources */,
@@ -2188,6 +2212,7 @@
 				9DAD343F1C3E43B800604744 /* SVProgressHUD.m in Sources */,
 				9D81F5EB1C325ADB00EA6CB4 /* MASLayoutConstraint.m in Sources */,
 				DBA8859F1C40B29B002CA21E /* UIView+MJExtension.m in Sources */,
+				9D911C321C55EFBB0087C4A5 /* ConfigParameterTools.m in Sources */,
 				9DC22BEA1C30EF92007DB2A5 /* ASIDataCompressor.m in Sources */,
 				9D0881B81C44F24B00B3BE3B /* CYPortalTransitionContext.m in Sources */,
 				9DC22C1A1C3115C7007DB2A5 /* OperateDBViewController.m in Sources */,
@@ -2248,6 +2273,7 @@
 				9D0881B21C44F24B00B3BE3B /* CoreLaunchCool.m in Sources */,
 				9DC22BF01C30EF92007DB2A5 /* ASINetworkQueue.m in Sources */,
 				9DB645421C3BA6D500C72C20 /* DaiDodgeKeyboard.m in Sources */,
+				9D911C2F1C55D0520087C4A5 /* SSKeychain.m in Sources */,
 				DBA885901C40B29B002CA21E /* MJRefreshFooter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
