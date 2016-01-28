@@ -111,6 +111,22 @@
     self.navigationItem.rightBarButtonItem = rightItem;
     
     
+//    UILabel* myLabel;
+//    myLabel=[[UILabel alloc] initWithFrame:CGRectMake(100.0f, 14.0f, 100.0f, 10.0f)];
+//    myLabel.font=[UIFont systemFontOfSize:10];
+//    myLabel.backgroundColor = [UIColor blackColor];
+//    [self.navigationController.navigationBar addSubview: myLabel];
+    
+//    UITextField *tt = [[UITextField alloc]initWithFrame:CGRectMake(kScreenWidth / 2 - 80, 7, 160, 30)];
+//    tt.text = @"test";
+//    tt.textAlignment = 1;
+//    tt.borderStyle = UITextBorderStyleRoundedRect;
+//    tt.backgroundColor = [UIColor clearColor];
+//
+//
+//    [self.navigationController.navigationBar addSubview: tt];
+
+    
 
     
     
