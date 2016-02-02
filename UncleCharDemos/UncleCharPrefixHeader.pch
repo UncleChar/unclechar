@@ -31,6 +31,7 @@
 #import "Masonry.h"
 #import "SVProgressHUD.h"
 #import "DBManager.h"
+#import "ASIHTTPRequest.h"
 
 
 #define kDriftXOfBaseView  [UIScreen mainScreen].bounds.size.width * 3 / 4

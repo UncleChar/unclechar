@@ -29,6 +29,13 @@
 		9D42DF151C4F4B4000CA7D47 /* StartChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D42DF141C4F4B4000CA7D47 /* StartChatViewController.m */; };
 		9D5391D41C4730A8009A84F6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D5391D31C4730A8009A84F6 /* icon.png */; };
 		9D5391D61C4734A9009A84F6 /* home.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9D5391D51C4734A9009A84F6 /* home.JPG */; };
+		9D6EA1EC1C607C1600DD0C1E /* DynamicShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1EB1C607C1600DD0C1E /* DynamicShowViewController.m */; };
+		9D6EA1F21C607DF900DD0C1E /* DynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1F11C607DF900DD0C1E /* DynamicModel.m */; };
+		9D6EA1F51C60806900DD0C1E /* DynamicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1F41C60806900DD0C1E /* DynamicTableViewCell.m */; };
+		9D6EA1F71C608E7F00DD0C1E /* dynamic.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6EA1F61C608E7F00DD0C1E /* dynamic.png */; };
+		9D6EA2071C60913800DD0C1E /* ASPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1FA1C60913800DD0C1E /* ASPopUpView.m */; };
+		9D6EA2081C60913800DD0C1E /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1FC1C60913800DD0C1E /* ASProgressPopUpView.m */; };
+		9D6EA20C1C60913800DD0C1E /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA2041C60913800DD0C1E /* ProgressView.m */; };
 		9D81F5CB1C32222B00EA6CB4 /* OperateDBTabelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D81F5CA1C32222B00EA6CB4 /* OperateDBTabelViewCell.m */; };
 		9D81F5E71C325ADB00EA6CB4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D81F5CD1C325ADB00EA6CB4 /* Info.plist */; };
 		9D81F5E81C325ADB00EA6CB4 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D81F5CF1C325ADB00EA6CB4 /* MASCompositeConstraint.m */; };
@@ -513,6 +520,19 @@
 		9D42DF141C4F4B4000CA7D47 /* StartChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartChatViewController.m; sourceTree = "<group>"; };
 		9D5391D31C4730A8009A84F6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		9D5391D51C4734A9009A84F6 /* home.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.JPG; sourceTree = "<group>"; };
+		9D6EA1EA1C607C1600DD0C1E /* DynamicShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicShowViewController.h; sourceTree = "<group>"; };
+		9D6EA1EB1C607C1600DD0C1E /* DynamicShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicShowViewController.m; sourceTree = "<group>"; };
+		9D6EA1F01C607DF900DD0C1E /* DynamicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicModel.h; sourceTree = "<group>"; };
+		9D6EA1F11C607DF900DD0C1E /* DynamicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicModel.m; sourceTree = "<group>"; };
+		9D6EA1F31C60806900DD0C1E /* DynamicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicTableViewCell.h; sourceTree = "<group>"; };
+		9D6EA1F41C60806900DD0C1E /* DynamicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicTableViewCell.m; sourceTree = "<group>"; };
+		9D6EA1F61C608E7F00DD0C1E /* dynamic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dynamic.png; sourceTree = "<group>"; };
+		9D6EA1F91C60913800DD0C1E /* ASPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopUpView.h; sourceTree = "<group>"; };
+		9D6EA1FA1C60913800DD0C1E /* ASPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopUpView.m; sourceTree = "<group>"; };
+		9D6EA1FB1C60913800DD0C1E /* ASProgressPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASProgressPopUpView.h; sourceTree = "<group>"; };
+		9D6EA1FC1C60913800DD0C1E /* ASProgressPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASProgressPopUpView.m; sourceTree = "<group>"; };
+		9D6EA2031C60913800DD0C1E /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		9D6EA2041C60913800DD0C1E /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		9D81F5C91C32222B00EA6CB4 /* OperateDBTabelViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperateDBTabelViewCell.h; sourceTree = "<group>"; };
 		9D81F5CA1C32222B00EA6CB4 /* OperateDBTabelViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperateDBTabelViewCell.m; sourceTree = "<group>"; };
 		9D81F5CD1C325ADB00EA6CB4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1222,6 +1242,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9D6EA1F81C60913800DD0C1E /* ASProgressPopUpView */ = {
+			isa = PBXGroup;
+			children = (
+				9D6EA1F91C60913800DD0C1E /* ASPopUpView.h */,
+				9D6EA1FA1C60913800DD0C1E /* ASPopUpView.m */,
+				9D6EA1FB1C60913800DD0C1E /* ASProgressPopUpView.h */,
+				9D6EA1FC1C60913800DD0C1E /* ASProgressPopUpView.m */,
+				9D6EA2031C60913800DD0C1E /* ProgressView.h */,
+				9D6EA2041C60913800DD0C1E /* ProgressView.m */,
+			);
+			path = ASProgressPopUpView;
+			sourceTree = "<group>";
+		};
 		9D81F5C81C3221F800EA6CB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1229,6 +1262,8 @@
 				9D81F5CA1C32222B00EA6CB4 /* OperateDBTabelViewCell.m */,
 				9DB6455C1C3BB4B400C72C20 /* ContactTableViewCell.h */,
 				9DB6455D1C3BB4B400C72C20 /* ContactTableViewCell.m */,
+				9D6EA1F31C60806900DD0C1E /* DynamicTableViewCell.h */,
+				9D6EA1F41C60806900DD0C1E /* DynamicTableViewCell.m */,
 			);
 			name = Views;
 			path = View;
@@ -1466,6 +1501,8 @@
 				9DB645531C3BAC8900C72C20 /* AddressBookModel.m */,
 				9DB645541C3BAC8900C72C20 /* ContactModel.h */,
 				9DB645551C3BAC8900C72C20 /* ContactModel.m */,
+				9D6EA1F01C607DF900DD0C1E /* DynamicModel.h */,
+				9D6EA1F11C607DF900DD0C1E /* DynamicModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1499,6 +1536,8 @@
 				9D911C2A1C55CFD40087C4A5 /* DeviceUUIDViewController.m */,
 				9DA02C2D1C5898F100599426 /* RichTextEditorViewController.h */,
 				9DA02C2E1C5898F100599426 /* RichTextEditorViewController.m */,
+				9D6EA1EA1C607C1600DD0C1E /* DynamicShowViewController.h */,
+				9D6EA1EB1C607C1600DD0C1E /* DynamicShowViewController.m */,
 			);
 			name = Controllers;
 			path = ../Controllers;
@@ -1761,6 +1800,7 @@
 		9DC21AB01C30E850007DB2A5 /* LeftElementsImg */ = {
 			isa = PBXGroup;
 			children = (
+				9D6EA1F61C608E7F00DD0C1E /* dynamic.png */,
 				9DBE5B181C3D0491004EFA95 /* login_password@2x.png */,
 				9DB6451D1C3B931B00C72C20 /* login_admin@2x.png */,
 				9DBE5B0E1C3D02FA004EFA95 /* qvip_emoji_button_goback@2x.png */,
@@ -1809,6 +1849,7 @@
 		9DC22BC71C30EF7F007DB2A5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				9D6EA1F81C60913800DD0C1E /* ASProgressPopUpView */,
 				9DA02C301C58A0D300599426 /* SBJSON */,
 				9DA02B721C5897DB00599426 /* RichText */,
 				9D0881931C44F24B00B3BE3B /* CoreLaunch */,
@@ -2296,6 +2337,7 @@
 				DBDE27ED1C2FC31200D10851 /* items_3@2x.png in Resources */,
 				9DB6452C1C3B93BB00C72C20 /* common_checxbox_selected@2x.png in Resources */,
 				9DA02BE61C58984100599426 /* ZSSoutdent.png in Resources */,
+				9D6EA1F71C608E7F00DD0C1E /* dynamic.png in Resources */,
 				9DB6450C1C3B903C00C72C20 /* contacts_slecting@2x.png in Resources */,
 				9DBE5AD11C3CD772004EFA95 /* 075@2x.gif in Resources */,
 				9DBE5AFF1C3D017A004EFA95 /* tabbar_items_calll@2x.png in Resources */,
@@ -2659,6 +2701,7 @@
 				DB167ACB1C2D737000AE61DB /* UncleCharAppDelegate.m in Sources */,
 				9DA02C271C58986E00599426 /* HRCgUtil.m in Sources */,
 				DBA885971C40B29B002CA21E /* MJRefreshBackStateFooter.m in Sources */,
+				9D6EA1EC1C607C1600DD0C1E /* DynamicShowViewController.m in Sources */,
 				DBA885931C40B29B002CA21E /* MJRefreshAutoNormalFooter.m in Sources */,
 				9DC22C0B1C30FFF8007DB2A5 /* FMResultSet.m in Sources */,
 				9DB645511C3BAC7C00C72C20 /* UserModel.m in Sources */,
@@ -2670,6 +2713,8 @@
 				9DAD34331C3E346700604744 /* LoginViewController.m in Sources */,
 				9DC22BED1C30EF92007DB2A5 /* ASIFormDataRequest.m in Sources */,
 				9DA02C2A1C58986E00599426 /* HRColorPickerViewController.m in Sources */,
+				9D6EA2071C60913800DD0C1E /* ASPopUpView.m in Sources */,
+				9D6EA2081C60913800DD0C1E /* ASProgressPopUpView.m in Sources */,
 				9DC22BEB1C30EF92007DB2A5 /* ASIDataDecompressor.m in Sources */,
 				9DC22C071C30FFF8007DB2A5 /* FMDatabase.m in Sources */,
 				9DB645431C3BA6D500C72C20 /* UIView+FirstResponderNotify.m in Sources */,
@@ -2681,6 +2726,7 @@
 				9DAD34401C3E43B800604744 /* SVRadialGradientLayer.m in Sources */,
 				DBDE27E11C2FBDA300D10851 /* CJNavigationController.m in Sources */,
 				9DC22BEE1C30EF92007DB2A5 /* ASIHTTPRequest.m in Sources */,
+				9D6EA20C1C60913800DD0C1E /* ProgressView.m in Sources */,
 				DBA8858E1C40B29B002CA21E /* MJRefreshBackFooter.m in Sources */,
 				DB167A981C2D734100AE61DB /* main.m in Sources */,
 				DB167AF31C2D7FA000AE61DB /* MainTabBarController.m in Sources */,
@@ -2716,8 +2762,10 @@
 				9DB644FA1C3B8CD500C72C20 /* ContactsSelectorViewController.m in Sources */,
 				9DC22BEC1C30EF92007DB2A5 /* ASIDownloadCache.m in Sources */,
 				9D0881B21C44F24B00B3BE3B /* CoreLaunchCool.m in Sources */,
+				9D6EA1F51C60806900DD0C1E /* DynamicTableViewCell.m in Sources */,
 				9DC22BF01C30EF92007DB2A5 /* ASINetworkQueue.m in Sources */,
 				9DB645421C3BA6D500C72C20 /* DaiDodgeKeyboard.m in Sources */,
+				9D6EA1F21C607DF900DD0C1E /* DynamicModel.m in Sources */,
 				9D911C2F1C55D0520087C4A5 /* SSKeychain.m in Sources */,
 				DBA885901C40B29B002CA21E /* MJRefreshFooter.m in Sources */,
 			);
