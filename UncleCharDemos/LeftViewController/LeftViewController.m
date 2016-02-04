@@ -19,6 +19,7 @@
 #import "DeviceUUIDViewController.h"
 #import "RichTextEditorViewController.h"
 #import "DynamicShowViewController.h"
+#import "SingleRequestViewController.h"
 
 #define kAvatarImgWidth    kDriftXOfLeftView / 4
 #define kAvatarImgHeight   kDriftXOfLeftView / 4
@@ -87,7 +88,7 @@
     [_headView addSubview:_signNameLabel];
 
     
-    _titleListArray = @[@"数据库测试-[FMDB]", @"MyLocation", @"UserAccount", @"GifPlayer", @"IflyMSC", @"EaseMob", @"JPushChat",@"DeviceUUID",@"RichText",@"动态刷新cell"];
+    _titleListArray = @[@"数据库测试-[FMDB]", @"MyLocation", @"UserAccount", @"GifPlayer", @"IflyMSC", @"EaseMob", @"JPushChat",@"DeviceUUID",@"RichText",@"动态刷新cell",@"断点续传"];
     _listTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_topBackgrooundImg.frame),self.view.frame.size.width, self.view.frame.size.height-_headView.frame.size.height - self.view.frame.size.height / 8) style:UITableViewStylePlain];
     _listTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _listTableView.dataSource = self;
@@ -240,6 +241,16 @@
             [baseVC.navigationController pushViewController:voiceVC animated:YES];
             
         }
+            
+        case 10:
+            
+        {
+            
+            SingleRequestViewController *voiceVC = [[SingleRequestViewController alloc]init];
+            [baseVC.navigationController pushViewController:voiceVC animated:YES];
+            
+        }
+            
         default:
             break;
     }

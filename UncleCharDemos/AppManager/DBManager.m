@@ -9,7 +9,7 @@
 #import "DBManager.h"
 #import "FMDB.h"
 #import "UserTestModel.h"
-
+#import "RequestModel.h"
 @interface DBManager ()
 
 @property (nonatomic, strong) FMDatabase      *fmdb;//数据库成员变量
@@ -77,13 +77,31 @@ static DBManager *_db = nil;
             BOOL isSuccess = [_fmdb executeUpdate:sqlStr];
             if (isSuccess) {
                 
-                NSLog(@"create succeed");
+                NSLog(@"create  UserInfo succeed");
                 
             }else {
             
-                NSLog(@"create falied");
+                NSLog(@"create  UserInfo falied");
                 
             }
+                
+            }else if ([tableName isEqualToString:@"RequestInfo"]){
+            
+                
+                NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(requestModel blod)",tableName];
+                
+                BOOL isSuccess = [_fmdb executeUpdate:sqlStr];
+                if (isSuccess) {
+                    
+                    NSLog(@"create  RequestInfo succeed");
+                    
+                }else {
+                    
+                    NSLog(@"create RequestInfo  falied");
+                    
+                }
+                
+            
             }else {
             
                 NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(fileName text ,userID text primary key,biggerData blod )",tableName];
@@ -140,32 +158,90 @@ static DBManager *_db = nil;
         }
     }
     
+    if ([tableName isEqualToString:@"RequestInfo"]) {
+        
+//        RequestModel *model = (RequestModel *)data;
+        
+//        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:model.request forKey:@"request"];
+//        NSMutableData* data = [[NSMutableData alloc]init];
+//        NSKeyedArchiver* archiver = [[NSKeyedArchiver alloc]initForWritingWithMutableData:data];
+//        [archiver encodeObject:dict forKey:@"requestData"];
+//        [archiver finishEncoding];
+//        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model];
+        
+
+        NSString *insertSqlStr = [NSString stringWithFormat:@"insert into %@ values (?)",tableName];
+        BOOL isSuccess = [_fmdb executeUpdate:insertSqlStr,data];
+        
+        if (isSuccess) {
+            
+            NSLog(@"insert succeed");
+        }else {
+            
+            NSLog(@"insert falied");
+        }
+    }
+    
+    
+    
+    
+    
     [_lock unlock];
     
 }
 
 
-- (UserTestModel *)searchDBDataWithModelID:(NSString *)identifier withTableName:(NSString *)tableName {
+- (id)searchDBDataWithModelID:(NSString *)identifier withTableName:(NSString *)tableName {
 
-    NSString *searchSqlString = [NSString stringWithFormat:@"select * from %@ where userID = ?",tableName];
     
-    FMResultSet *set = [_fmdb executeQuery:searchSqlString,identifier];
+    if ([tableName isEqualToString:@"UserInfo"]) {
+        
+        NSString *searchSqlString = [NSString stringWithFormat:@"select * from %@ where userID = ?",tableName];
+        
+        FMResultSet *set = [_fmdb executeQuery:searchSqlString,identifier];
+        
+        while ( [set next]) {
+            
+            UserTestModel *userModel = [[UserTestModel alloc]init];
+            
+            userModel.userName   = [set stringForColumn:@"userName"];
+            userModel.userID     = [set stringForColumn:@"userID"];
+            userModel.country    = [set stringForColumn:@"country"];
+            userModel.sex        = [set stringForColumn:@"sex"];
+            userModel.userMusic  = [set dataForColumn:@"userMusic"];
+            userModel.biggerData = [set dataForColumn:@"biggerData"];
+            userModel.telephone  = [set stringForColumn:@"telephone"];
+            
+            return userModel;
+        }
+
+
+        
+    }else if ([tableName isEqualToString:@"RequestInfo"]){
     
-    while ( [set next]) {
         
-        UserTestModel *userModel = [[UserTestModel alloc]init];
+        NSString *searchSqlString = [NSString stringWithFormat:@"select * from %@ ",tableName];
         
-        userModel.userName   = [set stringForColumn:@"userName"];
-        userModel.userID     = [set stringForColumn:@"userID"];
-        userModel.country    = [set stringForColumn:@"country"];
-        userModel.sex        = [set stringForColumn:@"sex"];
-        userModel.userMusic  = [set dataForColumn:@"userMusic"];
-        userModel.biggerData = [set dataForColumn:@"biggerData"];
-        userModel.telephone  = [set stringForColumn:@"telephone"];
+        FMResultSet *set = [_fmdb executeQuery:searchSqlString];
         
-        return userModel;
+        while ( [set next]) {
+            
+            RequestModel *model = [[RequestModel alloc]init];
+
+            
+            model = [set objectForColumnName:@"requestModel"];
+//            model = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+
+            return model;
+        }
+        
+    
+    }else {
+    
+    
     }
-    return nil;
+    
+     return nil;
 }
 
 - (NSArray *)allDataWithTableName:(NSString *)tableName {

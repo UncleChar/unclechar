@@ -10,7 +10,7 @@
 #import "AppBaseViewController.h"
 #import "MainTabBarController.h"
 #import "NSString+Extension.h"
-static  AppEngineManager *sharesElement = nil;
+static  AppEngineManager *sharedElement = nil;
 @implementation AppEngineManager
 
 
@@ -18,23 +18,23 @@ static  AppEngineManager *sharesElement = nil;
     
     @synchronized(self) {
         
-        if (sharesElement == nil) {
+        if (sharedElement == nil) {
             
-            sharesElement = [[self alloc]init];
+            sharedElement = [[self alloc]init];
         }
     }
     
-    return sharesElement;
+    return sharedElement;
 }
 
 +(id)allocWithZone:(struct _NSZone *)zone {
     
     @synchronized(self) {
         
-        if (sharesElement == nil) {
+        if (sharedElement == nil) {
             
-            sharesElement = [super allocWithZone:zone];
-            return  sharesElement;
+            sharedElement = [super allocWithZone:zone];
+            return  sharedElement;
         }
         
     }

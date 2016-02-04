@@ -32,7 +32,6 @@
 		9D6EA1EC1C607C1600DD0C1E /* DynamicShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1EB1C607C1600DD0C1E /* DynamicShowViewController.m */; };
 		9D6EA1F21C607DF900DD0C1E /* DynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1F11C607DF900DD0C1E /* DynamicModel.m */; };
 		9D6EA1F51C60806900DD0C1E /* DynamicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1F41C60806900DD0C1E /* DynamicTableViewCell.m */; };
-		9D6EA1F71C608E7F00DD0C1E /* dynamic.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6EA1F61C608E7F00DD0C1E /* dynamic.png */; };
 		9D6EA2071C60913800DD0C1E /* ASPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1FA1C60913800DD0C1E /* ASPopUpView.m */; };
 		9D6EA2081C60913800DD0C1E /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA1FC1C60913800DD0C1E /* ASProgressPopUpView.m */; };
 		9D6EA20C1C60913800DD0C1E /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6EA2041C60913800DD0C1E /* ProgressView.m */; };
@@ -51,6 +50,10 @@
 		9D911C2B1C55CFD40087C4A5 /* DeviceUUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D911C2A1C55CFD40087C4A5 /* DeviceUUIDViewController.m */; };
 		9D911C2F1C55D0520087C4A5 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D911C2E1C55D0520087C4A5 /* SSKeychain.m */; };
 		9D911C321C55EFBB0087C4A5 /* ConfigParameterTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D911C311C55EFBB0087C4A5 /* ConfigParameterTools.m */; };
+		9D978A3D1C618C2D00872D04 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D978A3C1C618C2D00872D04 /* NetworkManager.m */; };
+		9D978A3F1C61958700872D04 /* dynamic.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D978A3E1C61958700872D04 /* dynamic.png */; };
+		9D9F32A41C633CFF0093B8DD /* RequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F32A31C633CFF0093B8DD /* RequestModel.m */; };
+		9D9F32A71C63439B0093B8DD /* SingleRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F32A61C63439B0093B8DD /* SingleRequestViewController.m */; };
 		9DA02B771C5897F200599426 /* ZSSBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA02B741C5897F200599426 /* ZSSBarButtonItem.m */; };
 		9DA02B781C5897F200599426 /* ZSSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA02B761C5897F200599426 /* ZSSTextView.m */; };
 		9DA02BC01C58984100599426 /* ZSSbgcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DA02B7A1C58984100599426 /* ZSSbgcolor.png */; };
@@ -526,7 +529,6 @@
 		9D6EA1F11C607DF900DD0C1E /* DynamicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicModel.m; sourceTree = "<group>"; };
 		9D6EA1F31C60806900DD0C1E /* DynamicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicTableViewCell.h; sourceTree = "<group>"; };
 		9D6EA1F41C60806900DD0C1E /* DynamicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicTableViewCell.m; sourceTree = "<group>"; };
-		9D6EA1F61C608E7F00DD0C1E /* dynamic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dynamic.png; sourceTree = "<group>"; };
 		9D6EA1F91C60913800DD0C1E /* ASPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopUpView.h; sourceTree = "<group>"; };
 		9D6EA1FA1C60913800DD0C1E /* ASPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopUpView.m; sourceTree = "<group>"; };
 		9D6EA1FB1C60913800DD0C1E /* ASProgressPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASProgressPopUpView.h; sourceTree = "<group>"; };
@@ -567,6 +569,13 @@
 		9D911C2E1C55D0520087C4A5 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		9D911C301C55EFBB0087C4A5 /* ConfigParameterTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigParameterTools.h; sourceTree = "<group>"; };
 		9D911C311C55EFBB0087C4A5 /* ConfigParameterTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigParameterTools.m; sourceTree = "<group>"; };
+		9D978A3B1C618C2D00872D04 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		9D978A3C1C618C2D00872D04 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		9D978A3E1C61958700872D04 /* dynamic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dynamic.png; sourceTree = "<group>"; };
+		9D9F32A21C633CFF0093B8DD /* RequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestModel.h; sourceTree = "<group>"; };
+		9D9F32A31C633CFF0093B8DD /* RequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestModel.m; sourceTree = "<group>"; };
+		9D9F32A51C63439B0093B8DD /* SingleRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleRequestViewController.h; sourceTree = "<group>"; };
+		9D9F32A61C63439B0093B8DD /* SingleRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleRequestViewController.m; sourceTree = "<group>"; };
 		9DA02B731C5897F200599426 /* ZSSBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSSBarButtonItem.h; sourceTree = "<group>"; };
 		9DA02B741C5897F200599426 /* ZSSBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSSBarButtonItem.m; sourceTree = "<group>"; };
 		9DA02B751C5897F200599426 /* ZSSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSSTextView.h; sourceTree = "<group>"; };
@@ -1252,7 +1261,8 @@
 				9D6EA2031C60913800DD0C1E /* ProgressView.h */,
 				9D6EA2041C60913800DD0C1E /* ProgressView.m */,
 			);
-			path = ASProgressPopUpView;
+			name = ASProgressPopUpView;
+			path = ../Lib/ASProgressPopUpView;
 			sourceTree = "<group>";
 		};
 		9D81F5C81C3221F800EA6CB4 /* Views */ = {
@@ -1503,6 +1513,8 @@
 				9DB645551C3BAC8900C72C20 /* ContactModel.m */,
 				9D6EA1F01C607DF900DD0C1E /* DynamicModel.h */,
 				9D6EA1F11C607DF900DD0C1E /* DynamicModel.m */,
+				9D9F32A21C633CFF0093B8DD /* RequestModel.h */,
+				9D9F32A31C633CFF0093B8DD /* RequestModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1538,6 +1550,8 @@
 				9DA02C2E1C5898F100599426 /* RichTextEditorViewController.m */,
 				9D6EA1EA1C607C1600DD0C1E /* DynamicShowViewController.h */,
 				9D6EA1EB1C607C1600DD0C1E /* DynamicShowViewController.m */,
+				9D9F32A51C63439B0093B8DD /* SingleRequestViewController.h */,
+				9D9F32A61C63439B0093B8DD /* SingleRequestViewController.m */,
 			);
 			name = Controllers;
 			path = ../Controllers;
@@ -1800,7 +1814,7 @@
 		9DC21AB01C30E850007DB2A5 /* LeftElementsImg */ = {
 			isa = PBXGroup;
 			children = (
-				9D6EA1F61C608E7F00DD0C1E /* dynamic.png */,
+				9D978A3E1C61958700872D04 /* dynamic.png */,
 				9DBE5B181C3D0491004EFA95 /* login_password@2x.png */,
 				9DB6451D1C3B931B00C72C20 /* login_admin@2x.png */,
 				9DBE5B0E1C3D02FA004EFA95 /* qvip_emoji_button_goback@2x.png */,
@@ -1849,7 +1863,6 @@
 		9DC22BC71C30EF7F007DB2A5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				9D6EA1F81C60913800DD0C1E /* ASProgressPopUpView */,
 				9DA02C301C58A0D300599426 /* SBJSON */,
 				9DA02B721C5897DB00599426 /* RichText */,
 				9D0881931C44F24B00B3BE3B /* CoreLaunch */,
@@ -1933,6 +1946,8 @@
 				9DC22C101C3102A8007DB2A5 /* DBManager.m */,
 				9DC22C151C31119F007DB2A5 /* UserTestModel.h */,
 				9DC22C161C31119F007DB2A5 /* UserTestModel.m */,
+				9D978A3B1C618C2D00872D04 /* NetworkManager.h */,
+				9D978A3C1C618C2D00872D04 /* NetworkManager.m */,
 			);
 			path = AppManager;
 			sourceTree = "<group>";
@@ -2150,6 +2165,7 @@
 		DBDE27D61C2FBB9300D10851 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				9D6EA1F81C60913800DD0C1E /* ASProgressPopUpView */,
 				9D911C2C1C55D0490087C4A5 /* SSKeychain */,
 				9DC22C1B1C311A87007DB2A5 /* ConfigUITools.h */,
 				9DC22C1C1C311A87007DB2A5 /* ConfigUITools.m */,
@@ -2337,7 +2353,7 @@
 				DBDE27ED1C2FC31200D10851 /* items_3@2x.png in Resources */,
 				9DB6452C1C3B93BB00C72C20 /* common_checxbox_selected@2x.png in Resources */,
 				9DA02BE61C58984100599426 /* ZSSoutdent.png in Resources */,
-				9D6EA1F71C608E7F00DD0C1E /* dynamic.png in Resources */,
+				9D978A3F1C61958700872D04 /* dynamic.png in Resources */,
 				9DB6450C1C3B903C00C72C20 /* contacts_slecting@2x.png in Resources */,
 				9DBE5AD11C3CD772004EFA95 /* 075@2x.gif in Resources */,
 				9DBE5AFF1C3D017A004EFA95 /* tabbar_items_calll@2x.png in Resources */,
@@ -2647,6 +2663,7 @@
 				DBA8859C1C40B29B002CA21E /* MJRefreshConst.m in Sources */,
 				9DB6455B1C3BB3D200C72C20 /* ChineseToPinyin.m in Sources */,
 				9DA02C2F1C5898F100599426 /* RichTextEditorViewController.m in Sources */,
+				9D978A3D1C618C2D00872D04 /* NetworkManager.m in Sources */,
 				9DC22BF41C30EFAC007DB2A5 /* Reachability.m in Sources */,
 				9DA02C081C58985800599426 /* ZSSRichTextEditor.m in Sources */,
 				9D0881B11C44F24B00B3BE3B /* CALayer+Cool.m in Sources */,
@@ -2741,6 +2758,7 @@
 				DB167AD51C2D762100AE61DB /* AppEngineManager.m in Sources */,
 				9DC22C171C31119F007DB2A5 /* UserTestModel.m in Sources */,
 				9DC22BEF1C30EF92007DB2A5 /* ASIInputStream.m in Sources */,
+				9D9F32A71C63439B0093B8DD /* SingleRequestViewController.m in Sources */,
 				DBA8859A1C40B29B002CA21E /* MJRefreshStateHeader.m in Sources */,
 				DB167ADC1C2D767600AE61DB /* ActiveViewController.m in Sources */,
 				9DB6454B1C3BAAA400C72C20 /* DivideContactsViewController.m in Sources */,
@@ -2764,6 +2782,7 @@
 				9D0881B21C44F24B00B3BE3B /* CoreLaunchCool.m in Sources */,
 				9D6EA1F51C60806900DD0C1E /* DynamicTableViewCell.m in Sources */,
 				9DC22BF01C30EF92007DB2A5 /* ASINetworkQueue.m in Sources */,
+				9D9F32A41C633CFF0093B8DD /* RequestModel.m in Sources */,
 				9DB645421C3BA6D500C72C20 /* DaiDodgeKeyboard.m in Sources */,
 				9D6EA1F21C607DF900DD0C1E /* DynamicModel.m in Sources */,
 				9D911C2F1C55D0520087C4A5 /* SSKeychain.m in Sources */,

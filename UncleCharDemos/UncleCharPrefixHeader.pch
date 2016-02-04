@@ -25,9 +25,13 @@
  */
 #import "AppBaseViewController.h"
 
+
+#import "NetworkManager.h"
+
 /**
  *  以下几个是走遍四海而皆知的东西，不必多说
  */
+
 #import "Masonry.h"
 #import "SVProgressHUD.h"
 #import "DBManager.h"

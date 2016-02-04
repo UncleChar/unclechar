@@ -62,7 +62,7 @@
  *
  *  @return 返回的是模型
  */
-- (UserTestModel *)searchDBDataWithModelID:(NSString *)identifier withTableName:(NSString *)tableName;
+- (id)searchDBDataWithModelID:(NSString *)identifier withTableName:(NSString *)tableName;
 
 
 /**

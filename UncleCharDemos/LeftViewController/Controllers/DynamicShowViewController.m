@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) UITableView     *dynamicTableView;
 @property (nonatomic, strong) NSMutableArray  *dataArray;
-
+//@property (nonatomic, strong) NSMutableArray  *uploadingArray;
 @end
 
 @implementation DynamicShowViewController
@@ -34,16 +34,36 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(addModel)];
     rightItem.title = @"增加模型";
     self.navigationItem.rightBarButtonItem = rightItem;
+   
+    [NetworkManager shareInstance].downloadRequestArr = [[NetworkManager shareInstance]getDownloadRequestList];
+    
+    [NetworkManager shareInstance].modelArr = [[NetworkManager shareInstance]getModelList];
+    
+    NSLog(@"_uploadCount %ld", [NetworkManager shareInstance].downloadRequestArr.count);
+    
+      NSLog(@"&& %@", [NetworkManager shareInstance].downloadRequestArr);
+    
+    if ([[NetworkManager shareInstance] getDownloadRequestList].count > 0  ) {
+        UIProgressView *pro = [[UIProgressView alloc]initWithFrame:CGRectMake(56, 300, kScreenWidth - 60, 20)];
+        
+        NSLog(@"woupiuowuowueoweuowoweoweowoweuowowoweoweowueo--------------------------------");
+        ASIHTTPRequest *request =  [NetworkManager shareInstance].downloadRequestArr[0];
+        [request setShowAccurateProgress:YES];
+        [request setDownloadProgressDelegate:pro];
+        [[UIApplication sharedApplication].keyWindow addSubview:pro];
+    }
+    
     
     _dataArray = [[NSMutableArray alloc]initWithCapacity:0];
-    for (int i = 0; i < 3; i ++) {
-        
-        DynamicModel *model = [[DynamicModel alloc]init];
-        model.itemTitle = [NSString stringWithFormat:@" test 上传 %d",i];
-        model.hasRequest = NO;
-        [_dataArray addObject:model];
-    
-    }
+    _dataArray = [NetworkManager shareInstance].modelArr;
+//    for (int i = 0; i < 3; i ++) {
+//        
+//        DynamicModel *model = [[DynamicModel alloc]init];
+//        model.itemTitle = [NSString stringWithFormat:@" test 上传 %d",i];
+//        model.hasRequest = NO;
+//        [[NetworkManager shareInstance].modelArr addObject:model];
+//    
+//    }
     
     _dynamicTableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     _dynamicTableView.dataSource = self;
@@ -73,6 +93,7 @@
     
     DynamicModel *model = _dataArray[indexPath.row];
     cell.model = model;
+    cell.delegate = self;
     return cell;
     
 }
@@ -102,7 +123,10 @@
 - (void)addModel {
 
 
-    NSArray  *urlArray = @[@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe",@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe",@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe",@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe",@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe"];
+
+
+    NSArray  *urlArray = @[@"http://sohu.vodnew.lxdns.com/214/246/SvJGK4cDTCmWiCcMGWP4NB.mp4",@"http://sohu.vodnew.lxdns.com/214/246/SvJGK4cDTCmWiCcMGWP4NB.mp4",@"http://sohu.vodnew.lxdns.com/214/246/SvJGK4cDTCmWiCcMGWP4NB.mp4",@"http://sohu.vodnew.lxdns.com/214/246/SvJGK4cDTCmWiCcMGWP4NB.mp4"];
+//    ,@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe",@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe",@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe"];
     for (NSString *urlStr in urlArray) {
         
         DynamicModel *model = [[DynamicModel alloc]init];
@@ -110,7 +134,7 @@
         model.itemTitle = [NSString stringWithFormat:@"我是增加的模型"];
         model.hasRequest = YES;
         model.url = urlStr;
-        [_dataArray addObject:model];
+        [[NetworkManager shareInstance].modelArr addObject:model];
         
     }
     [_dynamicTableView reloadData];

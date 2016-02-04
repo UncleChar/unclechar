@@ -47,6 +47,7 @@
     DBManager *db = [[DBManager sharedDBManager]initDBDirectoryWithPath:engineManager.dirDBSqlite];//打开数据库
     [db createDBTableWithTableName:@"UserInfo"];
     [db createDBTableWithTableName:@"UserFavouriteAndSave"];
+    [db createDBTableWithTableName:@"RequestInfo"];
     
 
     _mapManager = [[BMKMapManager alloc]init];
@@ -56,8 +57,8 @@
     }
     
     
-    
-    
+    NetworkManager *net =  [NetworkManager shareInstance];
+    NSLog(@"kkkkkkkkkkkk %ld",net.downloadRequestArr.count);
     
 //    
 //    [[EaseMob sharedInstance] registerSDKWithAppKey:@"unclechar#unclechardemos" apnsCertName:nil];

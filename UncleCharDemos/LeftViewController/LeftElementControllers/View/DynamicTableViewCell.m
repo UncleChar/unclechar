@@ -94,7 +94,9 @@
         
         [request setTimeOutSeconds:30.0f];
         [request startAsynchronous];
-        
+        [ [NetworkManager shareInstance].downloadRequestArr addObject:request];
+         NSLog(@"_upldffdfdfdf %ld", [NetworkManager shareInstance].downloadRequestArr.count);
+         NSLog(@"&& %@", [NetworkManager shareInstance].downloadRequestArr);
          nameLabel.textColor = [UIColor lightGrayColor];
         
     }else {
