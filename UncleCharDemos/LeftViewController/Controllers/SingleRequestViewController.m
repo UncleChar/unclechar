@@ -35,18 +35,53 @@
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(backRequestModel)];
     rightItem.title = @"back";
-    self.navigationItem.rightBarButtonItem = leftItem;
+    self.navigationItem.leftBarButtonItem = leftItem;
     
    _ProgressView = [[UIProgressView alloc]initWithFrame:CGRectMake(56, 100, kScreenWidth - 60, 20)];
-    
+    [self.view addSubview:_ProgressView];
     
     RequestModel *model =[[DBManager sharedDBManager] searchDBDataWithModelID:@"123456" withTableName:@"RequestInfo"];
     if (nil == model) {
         
         
     }else {
-    
-    
+        
+
+        
+        
+        
+        
+        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:model.requestUrl] usingCache:ASICacheForSessionDurationCacheStoragePolicy];
+
+        [request setQueuePriority:NSOperationQueuePriorityNormal];
+        _request = request;
+        [request setDelegate:self];
+        
+  
+        //设置是是否支持断点下载
+        [request setAllowResumeForFileDownloads:YES];
+        
+        __block ASIHTTPRequest *blockRequest = request;
+        [request setCompletionBlock:^{
+            [self dynamicModelrequestFinished:blockRequest];
+        }];
+        
+        [request setFailedBlock:^{
+            [self dynamicModelrequestFailed:blockRequest];
+        }];
+        [request setNumberOfTimesToRetryOnTimeout:1];
+        [request setShowAccurateProgress:YES];
+        [request setDownloadProgressDelegate:_ProgressView];
+        
+        //        [request setShowAccurateProgress:YES];
+        //        [request setUploadProgressDelegate:_ProgressView];
+        
+        [request setTimeOutSeconds:30.0f];
+        [request startAsynchronous];
+        
+//        model.request = request;
+        
+//        [[DBManager sharedDBManager] insertDBWithData:model forTableName:@"RequestInfo"];
         
     }
     
@@ -64,7 +99,7 @@
     RequestModel *model = [[RequestModel alloc]init];
     
     model.requestID = @"123456"; //唯一ID
-    model.requestUrl = @"http://sohu.vodnew.lxdns.com/214/246/SvJGK4cDTCmWiCcMGWP4NB.mp4";
+    model.requestUrl = @"http://youtui.oss-cn-hangzhou.aliyuncs.com/download/ios/youtuiShare-ios-v1.1.1.zip";
     
     
     
@@ -102,6 +137,7 @@
     [request setDownloadDestinationPath:savePath];
     //设置临时文件路径
     [request setTemporaryFileDownloadPath:tempPath];
+    [request setCachePolicy:ASICacheForSessionDurationCacheStoragePolicy];
 
     //设置是是否支持断点下载
     [request setAllowResumeForFileDownloads:YES];
@@ -151,7 +187,17 @@
 }
 - (void)backRequestModel {
 
-
+ 
+    
+    if(_request)
+        
+    {
+        
+        [_request clearDelegatesAndCancel];
+        
+        _request.delegate = nil;
+        
+    }
     
 }
 

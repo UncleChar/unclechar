@@ -115,6 +115,7 @@
         [_dataArray removeObject:model];
         [_dynamicTableView reloadData];
         
+        
     }
 
     
