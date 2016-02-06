@@ -124,8 +124,6 @@
 - (void)addModel {
 
 
-
-
     NSArray  *urlArray = @[@"http://sohu.vodnew.lxdns.com/214/246/SvJGK4cDTCmWiCcMGWP4NB.mp4",@"http://sohu.vodnew.lxdns.com/214/246/SvJGK4cDTCmWiCcMGWP4NB.mp4",@"http://sohu.vodnew.lxdns.com/214/246/SvJGK4cDTCmWiCcMGWP4NB.mp4",@"http://sohu.vodnew.lxdns.com/214/246/SvJGK4cDTCmWiCcMGWP4NB.mp4"];
 //    ,@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe",@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe",@"http://music.baidu.com/pc/download/1454399323/BaiduMusic-77776666.exe"];
     for (NSString *urlStr in urlArray) {
